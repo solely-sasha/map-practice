@@ -2,7 +2,8 @@
 
 
 function doubleNumbers(arr){
-  // your code here
+    const newArray = arr.map(num => num * 2 )
+    return newArray
 }
 
 console.log(doubleNumbers([2, 5, 100])); // [4, 10, 200]
@@ -14,7 +15,8 @@ console.log(doubleNumbers([2, 5, 100])); // [4, 10, 200]
 
 
 function stringItUp(arr){
-  // your code here
+const stringArray = arr.map(num => num.toString())
+return stringArray;
 }
 
 console.log(stringItUp([2, 5, 100])); // ["2", "5", "100"]
@@ -26,7 +28,9 @@ console.log(stringItUp([2, 5, 100])); // ["2", "5", "100"]
 // **3) Capitalize the first letter of each name and make the rest of the characters lowercase**
 
 function capitalizeNames(arr){
-  // your code here
+  const names = arr.map(name => name[0].toUpperCase() + name.substr(1).toLowerCase())
+
+return names;
 }
 
 console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])); 
@@ -40,7 +44,8 @@ console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]));
 
 
 function namesOnly(arr){
-  // your code here
+const nameArray = arr.map(obj => obj.name)
+return nameArray;
 }
 
 console.log(namesOnly([
@@ -74,9 +79,11 @@ console.log(namesOnly([
 
 
 function makeStrings(arr){
-  // your code here
-}
 
+ const ageCheck = arr.map(obj => obj.age > 18 ? `${obj.name} can go to the Matrix` : `${obj.name} is underage!!`)
+ return ageCheck
+
+}
 console.log(makeStrings([
     {
         name: "Angelina Jolie",
@@ -110,7 +117,8 @@ console.log(makeStrings([
 // **6) Make an array of the names in `h1`s, and the ages in `h2`s**
 
 function readyToPutInTheDOM(arr){
-    // your code here
+    const domElements = arr.map(obj => `<h1>${obj.name}</h1><h2> ${obj.age}</h2>`)
+    return domElements;
   }
   console.log(readyToPutInTheDOM([
       {
